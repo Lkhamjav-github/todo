@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/4c3b4bf90b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="modal">
+        <form class="addTask">
+            <h1>Add Task</h1>
+            <div>
+                <label for="title">Title</label>
+                <input id="title" name="title" type="text">
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea id="description" name="description" type="text"></textarea>
+            </div>
+            <div>
+                <label for="status">Status</label>
+                <select name="status" id="status"></select>
+            </div>
+            <div>
+                <label for="priority">Priority</label>
+                <select name="priority"" id="priority""></select>
+            </div>
+            <button type="submit">Add task</button>
+        </form>
+    </div>
+    <div class="container">
+        <div class="boards">
+            <div id="board" class="board">
+                <div class="board-header">
+                    To do
+                    <span class="count" id="todo-count"></span>
+                </div>
+
+                <div id="addBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    <div>Add card</div>
+                </div>
+            </div>
+            <div id="board-in-progress" class="board">
+                <div class="board-header">
+                    In progress
+                    <span class="count" id="todo-count"></span>
+                </div>
+                <div id="addBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    <div>Add card</div>
+                </div>
+            </div>
+            <div id="board-stuck" class="board">
+                <div class="board-header">
+                    Stuck
+                    <span class="count" id="todo-count"></span>
+                </div>
+                <div id="addBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    <div>Add card</div>
+                </div>
+            </div>
+            <div id="board-done" class="board">
+                <div class="board-header">
+                    Done
+                    <span class="count" id="todo-count"></span>
+                </div>
+                <div id="addBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    <div>Add card</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <i id="fa-circle-check" class="fa-regular fa-circle-check"></i>
+    <i id="fa-circle-xmark" class="fa-regular fa-circle-xmark"></i>
+    <i id="fa-pen-to-square" class="fa-solid fa-pen-to-square"></i>
+    <script src="index.js"></script>
+    <script src="card.js"></script>
+</body>
+
+</html>
