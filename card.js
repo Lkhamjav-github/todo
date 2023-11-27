@@ -1,3 +1,4 @@
+
 const board = document.getElementById("board"); //boards duudaj bn 
 
 const boardInProgress = document.getElementById("board-in-progress");
