@@ -39,7 +39,7 @@
                     <option value="high">High</option>
                 </select>
             </div>
-            <button id="addTask" type="submit">Add task</button>
+            <button id="addTask" type="button">Add task</button>
         </form>
     </div>
     <div class="container">
@@ -47,9 +47,11 @@
             <div id="board" class="board">
                 <div class="board-header">
                     To do
-                    <span class="count" id="todo-count"></span>
-                </div>
 
+                </div>
+                <div id="middle-todo">
+
+                </div>
                 <div id="addBtn">
                     <i class="fa-solid fa-plus"></i>
                     <div>Add card</div>
@@ -60,6 +62,7 @@
                     In progress
                     <span class="count" id="todo-count"></span>
                 </div>
+                <div id="middle-inprogress"></div>
                 <div id="addBtn">
                     <i class="fa-solid fa-plus"></i>
                     <div>Add card</div>
@@ -70,6 +73,7 @@
                     Stuck
                     <span class="count" id="todo-count"></span>
                 </div>
+                <div id="middle-stuck"></div>
                 <div id="addBtn">
                     <i class="fa-solid fa-plus"></i>
                     <div>Add card</div>
@@ -80,6 +84,7 @@
                     Done
                     <span class="count" id="todo-count"></span>
                 </div>
+                <div id="middle-done"></div>
                 <div id="addBtn">
                     <i class="fa-solid fa-plus"></i>
                     <div>Add card</div>
@@ -87,13 +92,14 @@
             </div>
         </div>
     </div>
-    
-    
+
+
     <i id="fa-circle-check" class="fa-regular fa-circle-check"></i>
     <i id="fa-circle-xmark" class="fa-regular fa-circle-xmark"></i>
     <i id="fa-pen-to-square" class="fa-solid fa-pen-to-square"></i>
-    <script src="index.js"></script>
-    <script src="card.js"></script>
+    <!-- <script src="index.js"></script>
+    <script src="card.js"></script> -->
+    <script src="./script.js"></script>
 </body>
 
 </html>

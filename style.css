@@ -66,12 +66,12 @@ body {
 
 .modal {
     position: absolute;
-    opacity: 0;
+    display: none;
     background-color: white;
     border-radius: 8px;
     padding: 16px;
     width: 400px;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     gap: 16px;
     top: 50%;
@@ -93,4 +93,35 @@ form>div {
 
 textarea {
     resize: none;
+}
+
+.task {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    gap: 12px;
+}
+
+i {
+    font-size: 1.25em;
+}
+
+.details {
+    flex: 1 1 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+button {
+    width: fit-content;
+    padding: 4px 8px;
 }
