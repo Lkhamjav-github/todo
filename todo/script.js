@@ -14,12 +14,14 @@ const todoCount = document.getElementById("todo-count");
 const todoIn = document.getElementById("in-count");
 const todoStuck = document.getElementById("stuck-count");
 const todoDone = document.getElementById("done-count");
+const removemiddle = document.querySelector(".miidle-remove");
+const board = document.querySelectorAll(".board")
 
 function addBtn() {
 
     const card = document.createElement("div")
     card.classList.add('card');
-
+    card.draggable = "true";
     const actions = document.createElement("div");
     actions.classList.add('actions');
     const xmark = document.createElement("div");
@@ -60,6 +62,7 @@ function addBtn() {
         }
         count()
     })
+
 
 
     const tasks = document.getElementById("status").value
@@ -110,9 +113,42 @@ function addBtn() {
         }
 
     })
-    count()
 
+    count()
+    board.forEach(board => {
+        const dragStart = (e) => {
+            console.log("drag start", e.target.id);
+            e.dataTransfer.setData('text/plain', e.target.id);
+        }
+
+        const dragOver = (e) => {
+            e.preventDefault();
+            console.log("dragged over");
+        }
+
+        const dropItem = (e) => {
+            e.preventDefault();
+            const dropId = e.dataTransfer.getData('text/plain');
+            console.log("dropId", dropId);
+            const draggable = document.getElementById(dropId);
+            board.appendChild(draggable);
+            console.log(draggable);
+        }
+
+        card.addEventListener("dragstart", dragStart);
+        middleDone.addEventListener("dragover", dragOver);
+        middleDone.addEventListener("drop", dropItem);
+        middleIn.addEventListener("drop", dropItem);
+        middleIn.addEventListener("dragover", dragOver);
+        middleStuck.addEventListener("drop", dropItem);
+        middleStuck.addEventListener("dragover", dragOver);
+        middleTodo.addEventListener("drop", dropItem);
+        middleTodo.addEventListener("dragover", dragOver);
+        card.addEventListener("dragover", dragOver);
+    })
 }
+
+
 count()
 function count() {
 
