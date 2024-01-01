@@ -101,6 +101,7 @@ function addBtn() {
         if (card) {
             card.parentNode.removeChild(card);
         }
+        count()
 
     });
     pen.addEventListener("click", function () {
@@ -138,10 +139,16 @@ function addBtn() {
         card.addEventListener("dragstart", dragStart);
         middleDone.addEventListener("dragover", dragOver);
         middleDone.addEventListener("drop", dropItem);
+        card.addEventListener("dragover", dragOver);
+        card.addEventListener("dragstart", dragStart);
         middleIn.addEventListener("drop", dropItem);
         middleIn.addEventListener("dragover", dragOver);
+        card.addEventListener("dragover", dragOver);
+        card.addEventListener("dragstart", dragStart);
         middleStuck.addEventListener("drop", dropItem);
         middleStuck.addEventListener("dragover", dragOver);
+        card.addEventListener("dragover", dragOver);
+        card.addEventListener("dragstart", dragStart);
         middleTodo.addEventListener("drop", dropItem);
         middleTodo.addEventListener("dragover", dragOver);
         card.addEventListener("dragover", dragOver);
